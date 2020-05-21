@@ -1,0 +1,7 @@
+{
+  "name": "LookAt",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
