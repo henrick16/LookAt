@@ -1,0 +1,46 @@
+.round{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+.display-5{
+    font-size: 1.5em;
+}
+on-toolbar{
+    border:solid 0px;
+}
+ion-header{
+   // box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    
+}
+/*.rounde{
+    border: 1px solid #a8b4c0;
+    border-radius: 50%;
+    padding: calc(50% - 1px);
+    background:#09B1BA;;
+    display: inline-block;
+    cursor: pointer;
+
+}*/
+p{
+    font-size: 1em;;
+}
+ion-title{
+    color: #9be064;
+}
+.rejoin{
+    font-size: 0.850em;
+    color: #9be064;
+}
+ion-footer{
+    background-color: #212f15;
+    color: #fff
+}
+.rejoins{
+    font-size: 0.813em;
+}
+.font-weight-bold{
+    font-size: 1em;
+    color: #9be064;
+}

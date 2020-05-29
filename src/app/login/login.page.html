@@ -1,0 +1,66 @@
+<ion-header>
+
+  <ion-toolbar class="shadow-xs ">
+    
+    <ion-title class="  py-0"> <img class="w-25 d-block mx-auto" src="../assets/logo/logo.jpeg" alt=""></ion-title>
+    
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content >
+  <div class="container mt-3">
+    <div>
+    
+      <h1 class="display-5 ">Bonjour !</h1>
+    
+      <p class="font-weight-normal">Connectez-vous pour découvrir toutes nos <br> fonctionnalités.</p>
+    </div>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="exampleInputEmail1"><strong>Email</strong> </label>
+      <input   [ngClass]="{ 'is-invalid': submitted && controlForm.email.errors }" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+      <div *ngIf="submitted && controlForm.email.errors" class="invalid-feedback">
+        <div *ngIf="controlForm.email.errors.required">Ce champ est obligatoire</div>
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1"><strong>Mot de passe</strong></label>
+      <div class="icone " (click)="showPassword()" >
+        <i  *ngIf="passwordType=='password'" class="fas fa-eye"></i>
+        <i *ngIf="passwordType=='text'" class="fas fa-eye-slash"></i>
+     </div>
+     
+      <input  [ngClass]="{ 'is-invalid': submitted && controlForm.password.errors }"  [type]="passwordType" class="form-control" id="exampleInputPassword1" formControlName="password" >
+      <div *ngIf="submitted && controlForm.password.errors" class="invalid-feedback">
+        <div *ngIf="controlForm.password.errors.required">Ce champ est obligatoire</div>
+    </div>
+      <p class="text">Mot de passe oublié</p>
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="record">
+      <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
+    </div>
+    <button type="submit" class="btn  btn-lg btn-block" ><span>Se connecter</span> </button>
+   
+  </form>
+  <div class="w-100 mx-auto " (click)="onclick()" >
+    <button type="submit" class="btn  btn-lg btn-block" *ngIf="substitusion =='henrick'" ><span></span> {{substitusion}}</button>
+    <button type="submit" class="btn  btn-lg btn-block"*ngIf="substitusion=='yorick'" ><span></span>{{substitusion}} </button>
+   <p [ngStyle]="{color:getColor()}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, nostrum?</p>
+ </div>
+ 
+  <div class=" d-flex justify-content-center align-items-center  mt-5 ">
+    <div class=" rejoin font-weight-normal mr-1 "> <p>Envie de nous rejoindre ? </p> </div>
+    <div class=" rejoin mb-3 "><a> Créer un compte</a> </div>
+   
+     
+  </div>
+</div>
+
+</ion-content>
+<ion-footer class="py-1">
+  <div class="container text-left"><span>Look At 2020</span></div>
+
+</ion-footer>

@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-toolbar class="shadow-xs ">
+    <ion-title class="  py-0"> <img class="w-25 d-block mx-auto" src="../assets/logo/logo.jpeg" alt=""></ion-title>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content>
+  <div class="container mb-5 pb-1">
+  <div>
+    <div>
+    <h1 class="display-5 ">Bienvenue !</h1>
+  
+    <p class="font-weight-normal">Créer un compte pour…</p>
+  </div>
+    <div class="d-flex text-align-center justify-content-left mb-3">
+    <button (click)="createAccount(1)" type="button" class="btn btn-outline-info mr-2 round"  > <span> </span></button>
+    <p>Moi</p>
+    </div>
+    <div class="d-flex text-align-center justify-content-left">
+     
+      <button type="button" class="btn btn-outline-info mr-2 round" [routerLink]="'compte-parti-creation'"></button>
+      <p>Mon entreprise</p>
+    </div>
+    <div class="mt-4 mb-5">
+    <p><strong>Vous avez déjà un compte ?</strong> </p>
+    <p class=" font-weight-bold">Me connecter</p>
+    </div>
+  </div>
+</div>
+    <hr class="mt-0 mb-5  bg-light shadow-sm ">
+
+    <div class=" container mt-5 font-weight-lighter">
+      
+    <p class="rejoins">
+      Vous agissez à titre professionnel ?<br>
+    </p>
+      <div class=" rejoin mb-3 "><a> <strong> Créez plutôt un compte pro !</strong> </a> </div>
+      <p class="rejoins font-weight-lighter">
+      À défaut, en application de l’article L 132-2 du Code de la consommation qui sanctionne les pratiques commerciales trompeuses, vous encourez une peine d’emprisonnement de 2 ans et une amende de 300 000 euros.
+    </p>
+  </div>
+
+
+</ion-content>
+<ion-footer class="py-1">
+  <div class="container text-left"><span>LooKAt 2020</span></div>
+
+</ion-footer>

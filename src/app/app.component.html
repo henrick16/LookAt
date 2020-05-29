@@ -1,3 +1,42 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+    <ion-menu side="start" contentId="monMenu">
+     
+      <ion-header>
+        
+         
+        <ion-toolbar>
+          
+           
+          <ion-title>Menu</ion-title>
+       
+        </ion-toolbar>
+    
+      </ion-header>
+      <ion-content>
+        <ion-menu-toggle>
+        <ion-item  >
+          <p [routerLink]="'accueil'">Accueil</p>
+        </ion-item>
+      </ion-menu-toggle>
+
+    <ion-menu-toggle>
+        <ion-item  menuClose tappable>
+          <p  [routerLink]="'annonces'"menuClose>Annonces</p>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item  menuClose tappable>
+          <p  [routerLink]="'login'"menuClose>Se connecter</p>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item  menuClose tappable>
+          <p  [routerLink]="'compte-creation'"menuClose>inscription</p>
+        </ion-item>
+      </ion-menu-toggle>
+      
+      </ion-content>
+    </ion-menu>
+  <ion-router-outlet id="monMenu"></ion-router-outlet>
 </ion-app>

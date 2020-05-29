@@ -3,14 +3,39 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'accueil',
     pathMatch: 'full'
   },
+  {
+    path: 'accueil',
+    loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
+  },
+  {
+    path: 'annonces',
+    loadChildren: () => import('./annonces/annonces.module').then( m => m.AnnoncesPageModule)
+  },
+  {
+    path: 'avis',
+    loadChildren: () => import('./avis/avis.module').then( m => m.AvisPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
+
+  },
+  {
+    path: 'compte-creation',
+    loadChildren: () => import('./compte-creation/compte-creation.module').then(m => m.CompteCreationPageModule)
+
+  },
+  {
+    path: 'compte-parti-creation',
+    loadChildren: () => import('./compte-parti-creation/compte-parti-creation.module').then(m => m.ComptePartiCreationPageModule)
+
+  },
+ 
+ 
 ];
 
 @NgModule({
